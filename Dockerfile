@@ -9,9 +9,10 @@ ENV JENKINS_OPTS=" --handlerCounterMax=200"
 RUN mkdir /var/log/jenkins-log
 EXPOSE 8080
 
-FROM ubuntu
-RUN apt-get update && apt-get install nginx
-COPY create-env.sh /usr/local/nginx/html
+FROM nginx
+RUN apt-get update
+RUN apt-get install -y nginx
+COPY Nexus /usr/local/nginx/html
 ENTRYPOINT service nginx start && bash
 EXPOSE 80
 

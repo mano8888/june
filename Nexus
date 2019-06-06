@@ -1,9 +1,0 @@
-deploy:deploy-file
--DgroupId=com.month
--DartifactId=month
--Dversion=1.0-SNAPSHOT
--DgeneratePom=false
--Dpackaging=war
--Drepository=nexus
--Durl=https://nexus-tb.month.com/repository/some-june-pro
--Dfile=1.0-SNAPSHOT.war
